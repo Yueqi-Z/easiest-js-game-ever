@@ -1,0 +1,88 @@
+/* Reset default padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Game container styling */
+#game {
+    width: 500px;
+    height: 200px;
+    border: 2px solid #333;
+    margin: 50px auto;
+    background-color: #f0f8ff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Character styling */
+#character {
+    width: 30px;
+    height: 50px;
+    background-color: #ff6347;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    transition: top 0.1s;
+}
+
+/* Block styling */
+#block {
+    width: 20px;
+    height: 20px;
+    background-color: #4682b4;
+    position: absolute;
+    top: 150px;
+    left: 480px;
+    animation: block 1.5s linear infinite;
+}
+
+/* Keyframes for block movement */
+@keyframes block {
+    0% { left: 500px; }
+    100% { left: -20px; }
+}
+
+/* Jump animation */
+.animate {
+    animation: jump 0.5s;
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    30% { bottom: 100px; }
+    70% { bottom: 100px; }
+    100% { bottom: 0; }
+}
+
+/* Score display styling */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Button styling */
+button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* Countdown display styling */
+#countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  font-family: Arial, sans-serif;
+  display: none; /* Hidden by default */
+}
